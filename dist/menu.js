@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.mainMenu = mainMenu;
 const prompts_1 = require("@inquirer/prompts");
+const abv_1 = require("./calculators/abv");
 async function mainMenu() {
     const choice = await (0, prompts_1.select)({
         message: "Select a brewing calculator:",
@@ -17,7 +18,7 @@ async function mainMenu() {
     });
     switch (choice) {
         case "abv":
-            await console.log("abv");
+            await (0, abv_1.abv)();
             break;
         case "ibu":
             await console.log("ibu");
