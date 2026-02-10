@@ -1,4 +1,5 @@
 import { select } from "@inquirer/prompts";
+import { abv } from "./calculators/abv";
 
 export async function mainMenu(): Promise<void> {
   const choice = await select({
@@ -16,7 +17,7 @@ export async function mainMenu(): Promise<void> {
 
   switch (choice) {
     case "abv":
-      await console.log("abv");
+      await abv();
       break;
     case "ibu":
       await console.log("ibu");
