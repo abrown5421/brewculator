@@ -1,6 +1,7 @@
 import { select } from "@inquirer/prompts";
 import { abv } from "./calculators/abv";
 import { ibu } from "./calculators/ibu";
+import { srm } from "./calculators/srm";
 
 export async function mainMenu(): Promise<void> {
   const choice = await select({
@@ -24,7 +25,7 @@ export async function mainMenu(): Promise<void> {
       await ibu();
       break;
     case "srm":
-      await console.log("srm");
+      await srm();
       break;
     case "dilution":
       await console.log("dilution");
