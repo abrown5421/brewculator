@@ -3,6 +3,7 @@ import { abv } from "./calculators/abv";
 import { ibu } from "./calculators/ibu";
 import { srm } from "./calculators/srm";
 import { boiloffAndDilution } from "./calculators/boiloffAndDilution";
+import { tempCorrection } from "./calculators/tempCorrection";
 
 export async function mainMenu(): Promise<void> {
   const choice = await select({
@@ -32,7 +33,7 @@ export async function mainMenu(): Promise<void> {
       await boiloffAndDilution();
       break
     case "hydrometer":
-      await console.log("hydrometer");
+      await tempCorrection();
       break;
     case "exit":
       console.log("🍻 Cheers!");
