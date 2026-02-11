@@ -2,6 +2,7 @@ import { select } from "@inquirer/prompts";
 import { abv } from "./calculators/abv";
 import { ibu } from "./calculators/ibu";
 import { srm } from "./calculators/srm";
+import { boiloffAndDilution } from "./calculators/boiloffAndDilution";
 
 export async function mainMenu(): Promise<void> {
   const choice = await select({
@@ -28,11 +29,8 @@ export async function mainMenu(): Promise<void> {
       await srm();
       break;
     case "dilution":
-      await console.log("dilution");
-      break;
-    case "boiloff":
-      await console.log("boiloff");
-      break;
+      await boiloffAndDilution();
+      break
     case "hydrometer":
       await console.log("hydrometer");
       break;
