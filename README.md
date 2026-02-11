@@ -4,8 +4,8 @@ A command-line tool for homebrewers to calculate essential brewing metrics inclu
 
 ## Installation
 ```bash
-git clone <repository-url>
-cd brewing-calculator
+git clone [<repository-url>](https://github.com/abrown5421/brewculator
+cd brewculator
 npm install
 tsc
 node dist/index.js
