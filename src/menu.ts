@@ -36,7 +36,7 @@ export async function mainMenu(): Promise<void> {
       await tempCorrection();
       break;
     case "exit":
-      console.log("🍻 Cheers!");
+      console.log("Goodbye");
       process.exit(0);
   }
 
