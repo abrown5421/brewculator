@@ -5,7 +5,8 @@ const prompts_1 = require("@inquirer/prompts");
 const abv_1 = require("./calculators/abv");
 const ibu_1 = require("./calculators/ibu");
 const srm_1 = require("./calculators/srm");
-const dilution_1 = require("./calculators/dilution");
+const boiloffAndDilution_1 = require("./calculators/boiloffAndDilution");
+const tempCorrection_1 = require("./calculators/tempCorrection");
 async function mainMenu() {
     const choice = await (0, prompts_1.select)({
         message: "Select a brewing calculator:",
@@ -30,13 +31,10 @@ async function mainMenu() {
             await (0, srm_1.srm)();
             break;
         case "dilution":
-            await (0, dilution_1.dilution)();
-            break;
-        case "boiloff":
-            await console.log("boiloff");
+            await (0, boiloffAndDilution_1.boiloffAndDilution)();
             break;
         case "hydrometer":
-            await console.log("hydrometer");
+            await (0, tempCorrection_1.tempCorrection)();
             break;
         case "exit":
             console.log("🍻 Cheers!");
